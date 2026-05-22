@@ -21,7 +21,7 @@ body{background:var(--dark);font-family:'Space Grotesk',sans-serif;color:var(--w
 .cursor-ring{width:36px;height:36px;border:1.5px solid var(--neon);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transition:transform .08s;opacity:.5;mix-blend-mode:difference;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:.9rem 2.5rem;background:rgba(8,8,16,0.8);backdrop-filter:blur(20px);border-bottom:.5px solid var(--line);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:.9rem 2.5rem;background:rgba(8,8,16,0.8);backdrop-filter:blur(20px);}
 .logo{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--neon);display:flex;align-items:center;gap:8px;}
 .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--neon);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.8);}}
@@ -40,12 +40,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 @keyframes float{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-20px) scale(1.05);}66%{transform:translate(-20px,30px) scale(.97);}};
 
 .hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;width:100%;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,255,0,.1);border:.5px solid rgba(212,255,0,.3);padding:6px 16px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--neon);margin-bottom:2rem;animation:fadeUp .8s ease both;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,255,0,.1);border:.5px solid rgba(212,255,0,.3);padding:6px 16px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--neon);}
 .hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--neon);animation:pulse 1.5s infinite;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
 .hero-name{font-family:'Playfair Display',serif;font-weight:900;line-height:.9;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp .8s .1s ease both;}
-.hero-name .line1{font-style:italic;font-size:clamp(42px,8vw,80px);background:linear-gradient(135deg,#D4FF00,#00F5FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+.hero-name .line1{font-style:italic;font-size:clamp(42px,8vw,80px);background:linear-gradient(135deg,#D4FF00,#00F5FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-name .line2{font-size:clamp(52px,10vw,100px);color:#fff;display:block;line-height:.95;}
 
 .hero-desc{font-size:15px;line-height:1.8;color:var(--white);max-width:520px;margin-bottom:2.5rem;font-weight:300;animation:fadeUp .8s .2s ease both;}
@@ -61,9 +61,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .pill-purple{background:rgba(124,58,237,.15);border:.5px solid rgba(124,58,237,.4);color:#a78bfa;}
 
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .8s .4s ease both;}
-.btn-glow{padding:14px 32px;background:var(--neon);color:#080810;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;transition:all .25s;box-shadow:0 0 30px rgba(212,255,0,.3);}
+.btn-glow{padding:14px 32px;background:var(--neon);color:#080810;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;border-radius:4px;transition:all .2s;}
 .btn-glow:hover{box-shadow:0 0 50px rgba(212,255,0,.5);transform:translateY(-2px);}
-.btn-outline{padding:14px 32px;background:transparent;color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:1px solid var(--line);cursor:pointer;border-radius:2px;transition:all .25s;}
+.btn-outline{padding:14px 32px;background:transparent;color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:1.5px solid var(--white);cursor:pointer;border-radius:4px;transition:all .2s;}
 .btn-outline:hover{border-color:var(--white);transform:translateY(-2px);}
 
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeIn 1s 1s ease both;}
@@ -122,15 +122,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 
 /* PROYECTOS */
 .proj-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap;}
-.proj-tab{padding:8px 20px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;border-radius:100px;transition:all .2s;}
+.proj-tab{padding:8px 20px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;border-radius:4px;transition:all .2s;}
 .proj-tab.active,.proj-tab:hover{background:var(--neon);color:#080810;border-color:var(--neon);}
 
 .proj-panel{display:none;}
 .proj-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;animation:fadeUp .5s ease both;}
 
-.mockup-zone{background:var(--dark3);border:.5px solid var(--line);border-radius:4px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .3s;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;}
+.mockup-zone{background:var(--dark3);border:.5px solid var(--line);border-radius:4px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .3s;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .mockup-zone:hover{border-color:rgba(255,255,255,.25);}
-.mockup-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
 .mockup-zone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;}
 .mockup-zone.has-img img{display:block;}
 .mockup-zone.has-img .upload-hint{display:none;}
@@ -219,7 +218,7 @@ footer{border-top:.5px solid var(--line);padding:1.5rem 2.5rem;display:flex;just
 .reveal.visible{opacity:1;transform:translateY(0);}
 
 /* NOISE GLOBAL */
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='256' height='256' fill='white' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");}
 
 /* EDITORIAL FUSION REDESIGN */
 :root{
@@ -578,12 +577,6 @@ nav{
   border-color:#302F2F;
   box-shadow:8px 8px 0 rgba(244,182,200,.55);
 }
-.design-slot input[type=file]{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  cursor:pointer;
-}
 .design-slot img{
   position:absolute;
   inset:0;
@@ -630,57 +623,6 @@ nav{
   line-height:1.45;
   color:rgba(255,255,255,.78);
 }
-.design-actions{
-  position:absolute;
-  z-index:5;
-  top:.7rem;
-  right:.7rem;
-  display:flex;
-  gap:.4rem;
-}
-.design-action{
-  border:1px solid rgba(48,47,47,.2);
-  background:rgba(255,255,255,.84);
-  color:#302F2F;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  text-decoration:none;
-  padding:.45rem .6rem;
-  cursor:pointer;
-}
-.design-action:hover{background:var(--pastel-butter);}
-.design-slot.has-img img{display:block;}
-.design-slot.has-img .design-placeholder{display:none;}
-.design-placeholder{
-  position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:1rem;
-  pointer-events:none;
-}
-.design-kind{
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--magenta);
-}
-.design-plus{
-  font-family:'Playfair Display',serif;
-  font-size:72px;
-  line-height:.8;
-  color:var(--ink);
-}
-.design-name{
-  font-size:13px;
-  line-height:1.45;
-  color:rgba(7,7,10,.68);
-}
 .design-slot[data-type="branding"]{background:linear-gradient(135deg,rgba(244,182,200,.44),transparent 45%),#fbf6f2;}
 .design-slot[data-type="social"]{background:linear-gradient(135deg,rgba(221,212,240,.48),transparent 45%),#fbf6f2;}
 .design-slot[data-type="brochure"]{background:linear-gradient(135deg,rgba(207,231,239,.62),transparent 45%),#fbf6f2;}
@@ -697,117 +639,6 @@ nav{
   padding:1rem;
   min-height:120px;
 }
-.design-modal{
-  position:fixed;
-  inset:0;
-  z-index:10000;
-  background:rgba(7,7,10,.78);
-  backdrop-filter:blur(18px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:2rem;
-}
-.design-modal.active{display:flex;}
-.design-modal-card{
-  width:min(940px,100%);
-  max-height:88vh;
-  background:#fff8f5;
-  color:#302F2F;
-  display:grid;
-  grid-template-columns:minmax(0,1.1fr) minmax(260px,.65fr);
-  border:1px solid rgba(255,255,255,.3);
-}
-.design-modal-media{
-  min-height:420px;
-  background:#302F2F;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-}
-.design-modal-media img{
-  width:100%;
-  height:100%;
-  max-height:76vh;
-  object-fit:contain;
-}
-.design-modal-info{
-  padding:1.5rem;
-  background:linear-gradient(135deg,#fff8f5,var(--pastel-rose));
-}
-.design-modal-kicker{
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:#C65B76;
-  margin-bottom:.7rem;
-}
-.design-modal-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(34px,5vw,58px);
-  line-height:.9;
-  margin-bottom:1rem;
-}
-.design-modal-desc{
-  font-size:14px;
-  line-height:1.75;
-  color:rgba(48,47,47,.72);
-}
-.design-modal-close{
-  margin-top:1.5rem;
-  border:1px solid rgba(48,47,47,.2);
-  background:#302F2F;
-  color:#fff;
-  padding:.9rem 1rem;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-.experience-pastel{
-  background:
-    radial-gradient(circle at 80% 8%,rgba(244,182,200,.22),transparent 32%),
-    radial-gradient(circle at 15% 90%,rgba(221,237,217,.16),transparent 34%),
-    #111014;
-  max-width:100%;
-}
-.experience-pastel .sec-header{
-  max-width:1040px;
-  margin:0 auto 3rem;
-}
-.experience-pastel .timeline{
-  max-width:1040px;
-  margin:0 auto;
-  padding-left:0;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1px;
-  background:rgba(255,255,255,.12);
-}
-.experience-pastel .timeline::before{display:none;}
-.experience-pastel .tl-item{
-  padding:1.35rem;
-  background:rgba(255,248,245,.92);
-  color:#302F2F;
-  min-height:220px;
-}
-.experience-pastel .tl-dot{display:none;}
-.experience-pastel .tl-date{color:#C65B76;}
-.experience-pastel .tl-role{color:#302F2F;font-size:18px;text-transform:none;letter-spacing:0;}
-.experience-pastel .tl-company{color:rgba(48,47,47,.58);}
-.experience-pastel .tl-desc{color:rgba(48,47,47,.72);}
-.experience-pastel .tl-tag{
-  background:var(--pastel-rose)!important;
-  border-color:rgba(48,47,47,.14)!important;
-  color:#302F2F!important;
-}
-.experience-pastel .tl-item:nth-child(2){background:var(--pastel-blue);}
-.experience-pastel .tl-item:nth-child(3){background:var(--pastel-mint);}
-.experience-pastel .tl-item:nth-child(4){background:var(--pastel-lilac);}
-.experience-pastel .tl-item:nth-child(5){background:var(--pastel-butter);grid-column:span 2;}
 .design-note strong{
   display:block;
   font-size:10px;
@@ -982,6 +813,47 @@ footer .ft{color:rgba(7,7,10,.68);}
   .design-grid,.design-detail{grid-template-columns:1fr;}
   .design-slot{min-height:240px;}
 }
+.experience-pastel{
+  background:
+    radial-gradient(circle at 80% 8%,rgba(244,182,200,.22),transparent 32%),
+    radial-gradient(circle at 15% 90%,rgba(221,237,217,.16),transparent 34%),
+    #111014;
+  max-width:100%;
+}
+.experience-pastel .sec-header{
+  max-width:1040px;
+  margin:0 auto 3rem;
+}
+.experience-pastel .timeline{
+  max-width:1040px;
+  margin:0 auto;
+  padding-left:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  background:rgba(255,255,255,.12);
+}
+.experience-pastel .timeline::before{display:none;}
+.experience-pastel .tl-item{
+  padding:1.35rem;
+  background:rgba(255,248,245,.92);
+  color:#302F2F;
+  min-height:220px;
+}
+.experience-pastel .tl-dot{display:none;}
+.experience-pastel .tl-date{color:#C65B76;}
+.experience-pastel .tl-role{color:#302F2F;font-size:18px;text-transform:none;letter-spacing:0;}
+.experience-pastel .tl-company{color:rgba(48,47,47,.58);}
+.experience-pastel .tl-desc{color:rgba(48,47,47,.72);}
+.experience-pastel .tl-tag{
+  background:var(--pastel-rose)!important;
+  border-color:rgba(48,47,47,.14)!important;
+  color:#302F2F!important;
+}
+.experience-pastel .tl-item:nth-child(2){background:var(--pastel-blue);}
+.experience-pastel .tl-item:nth-child(3){background:var(--pastel-mint);}
+.experience-pastel .tl-item:nth-child(4){background:var(--pastel-lilac);}
+.experience-pastel .tl-item:nth-child(5){background:var(--pastel-butter);grid-column:span 2;}
 </style>
 </head>
 <body>
@@ -1001,806 +873,403 @@ footer .ft{color:rgba(7,7,10,.68);}
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-orb orb1"></div>
-  <div class="hero-orb orb2"></div>
-  <div class="hero-orb orb3"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><span></span>Portafolio · Marca Personal · 2025</div>
+    <div class="hero-badge"><span></span>Bienvenido</div>
     <h1 class="hero-name">
-      <span class="line1">Valeria</span>
-      <span class="line2">MARTÍNEZ</span>
+      <span class="line1">Creativa</span>
+      <span class="line2">Valeria Martínez</span>
     </h1>
-    <p class="hero-desc">
-      <strong>Marketing estratégico y branding con visión global</strong> para pequeñas empresas que quieren crecer con identidad propia. Estudiante apasionada por el diseño, la comunicación y los negocios.
-    </p>
+    <p class="hero-desc">Especialista en <strong>editorial, branding y diseño</strong> con enfoque estratégico. Transformo visiones en identidades visuales memorables.</p>
     <div class="hero-pills">
-      <span class="pill pill-neon">Marketing Digital</span>
-      <span class="pill pill-pink">Branding &amp; Identidad</span>
-      <span class="pill pill-cyan">Diseño Gráfico</span>
-      <span class="pill pill-orange">Inglés B2</span>
-      <span class="pill pill-purple">Negocios Internacionales</span>
-      <span class="pill pill-neon">IA Aplicada</span>
+      <span class="pill pill-neon">Diseño Editorial</span>
+      <span class="pill pill-pink">Branding</span>
+      <span class="pill pill-cyan">Identidad Visual</span>
+      <span class="pill pill-orange">Estrategia</span>
     </div>
     <div class="hero-cta">
-      <button class="btn-glow" onclick="document.getElementById('disenos').scrollIntoView({behavior:'smooth'})">Ver mis diseños →</button>
-      <button class="btn-outline" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Hablemos</button>
+      <button class="btn-glow">Ver Portafolio</button>
+      <button class="btn-outline">Contactarme</button>
     </div>
   </div>
-  <aside class="hero-visual" aria-label="Direccion visual del portafolio">
+  <div class="hero-visual">
     <div class="poster-frame">
-      <div class="poster-title">Digital<em>brand</em> portfolio</div>
+      <div class="poster-title">Editorial<em>Fusion</em></div>
     </div>
     <div class="poster-card">
-      <div class="poster-kicker">Focus</div>
-      <div class="poster-number">03</div>
-      <p class="poster-copy">Casos reales convertidos en narrativa visual: identidad, estrategia y piezas listas para presentar.</p>
+      <div class="poster-kicker">01</div>
+      <div class="poster-number">→</div>
     </div>
     <div class="poster-card dark">
-      <div class="poster-kicker">Method</div>
-      <div class="poster-number">B2</div>
-      <p class="poster-copy">Marketing con mirada internacional, criterio estetico y herramientas digitales.</p>
+      <div class="poster-kicker">VISIÓN</div>
+      <div class="poster-copy">Cada proyecto es una oportunidad para crear algo excepcional</div>
     </div>
-  </aside>
-  <div class="hero-scroll"><div class="scroll-line"></div><span class="scroll-txt">Scroll</span></div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <div class="scroll-txt">Scroll</div>
+  </div>
 </section>
 
 <div class="editorial-strip">
   <div class="strip-cell">
-    <div class="strip-label">Rol</div>
-    <div class="strip-value">Estrategia + identidad</div>
+    <div class="strip-label">Experiencia</div>
+    <div class="strip-value">5+</div>
   </div>
   <div class="strip-cell acid">
-    <div class="strip-label">Estilo</div>
-    <div class="strip-value">Editorial digital</div>
+    <div class="strip-label">Proyectos</div>
+    <div class="strip-value">20+</div>
   </div>
   <div class="strip-cell">
-    <div class="strip-label">Disponible</div>
-    <div class="strip-value">Freelance / practicas</div>
+    <div class="strip-label">Clientes</div>
+    <div class="strip-value">15+</div>
   </div>
 </div>
 
-<div class="section-divider"></div>
-<div class="section-divider"></div>
-
-<div class="section reveal light-band" id="disenos">
+<section class="section light-band" id="sobre">
   <div class="sec-header">
-    <div class="sec-num">03</div>
+    <div class="sec-num">01</div>
     <div class="sec-info">
-      <div class="sec-tag">Zona interactiva</div>
-      <div class="sec-title">Mis diseños</div>
+      <div class="sec-tag">Conóceme</div>
+      <h2 class="sec-title">Sobre Mí</h2>
     </div>
   </div>
-</div>
-
-<div class="design-zone-wrap reveal">
-  <div class="design-lab">
-
-    <aside class="design-panel dark-panel">
-      <div class="design-panel-title">Design<br>gallery</div>
-
-      <p class="design-panel-copy">
-        Una galería pastel para mostrar tus marcas, brochures,
-        piezas de redes y trabajos reales.
-      </p>
-
-      <div class="design-controls" aria-label="Filtros de diseño">
-        <button class="design-filter active" onclick="filterDesigns('all',this)">
-          Todos los diseños
-        </button>
-
-        <button class="design-filter" onclick="filterDesigns('branding',this)">
-          Branding
-        </button>
-
-        <button class="design-filter" onclick="filterDesigns('designs',this)">
-          Diseños
-        </button>
-
-        <button class="design-filter" onclick="filterDesigns('social',this)">
-          Redes sociales
-        </button>
-
-        <button class="design-filter" onclick="filterDesigns('web',this)">
-          Páginas web
-        </button>
-      </div>
-    </aside>
-
-    <div class="design-board">
-
-      <div class="design-grid">
-
-        <!-- BRANDING -->
-
-        <div class="design-slot has-img"
-             data-type="branding"
-             data-title="InkWizards"
-             data-desc="Identidad visual y piezas de branding para InkWizards."
-             id="design-1">
-
-          <img src="assets/Branding/InkWizards/BRAND AND LOGO DESING FRAME WHITE.png"
-               alt="InkWizards Branding">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-1')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>InkWizards</strong>
-            <span>Branding</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="branding"
-             data-title="InkWizards"
-             data-desc="Carta visual y piezas de identidad InkWizards."
-             id="design-2">
-
-          <img src="assets/Branding/InkWizards/carta inkwizard.png"
-               alt="Carta InkWizards">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-2')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>InkWizards</strong>
-            <span>Branding</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="branding"
-             data-title="InkWizards"
-             data-desc="Identidad y elementos gráficos InkWizards."
-             id="design-3">
-
-          <img src="assets/Branding/InkWizards/bi inkwizars.png"
-               alt="InkWizards visual">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-3')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>InkWizards</strong>
-            <span>Branding</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="branding"
-             data-title="Electricidad"
-             data-desc="Brochure corporativo para marca de electricidad."
-             id="design-4">
-
-          <img src="assets/Branding/Electricidad/brochure electricidad.png"
-               alt="Brochure electricidad">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-4')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Electricidad</strong>
-            <span>Brochure</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="branding"
-             data-title="Toposig"
-             data-desc="Brochure corporativo para Toposig."
-             id="design-5">
-
-          <img src="assets/Branding/Toposig/brochure toposig.png"
-               alt="Brochure Toposig">
-
-          <div class="design-actions">
-
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-5')">
-              Ver
-            </button>
-
-            <a class="design-action"
-               href="https://toposig.vercel.app/"
-               target="_blank"
-               onclick="event.stopPropagation()">
-              Web
-            </a>
-
-          </div>
-
-          <div class="design-caption">
-            <strong>Toposig</strong>
-            <span>Brochure + Web</span>
-          </div>
-        </div>
-
-
-        <!-- REDES SOCIALES -->
-
-        <div class="design-slot has-img"
-             data-type="social branding"
-             data-title="Villetalia"
-             data-desc="Preview de Instagram y contenido social."
-             id="design-6">
-
-          <img src="assets/Villetalia/2.jpeg"
-               alt="Villetalia Instagram">
-
-          <div class="design-actions">
-
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-6')">
-              Ver
-            </button>
-
-            <a class="design-action"
-               href="https://www.instagram.com/villetalia__/"
-               target="_blank"
-               onclick="event.stopPropagation()">
-              IG
-            </a>
-
-          </div>
-
-          <div class="design-caption">
-            <strong>Villetalia</strong>
-            <span>Redes sociales</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="social branding"
-             data-title="Villetalia"
-             data-desc="Contenido visual y presencia social."
-             id="design-7">
-
-          <img src="assets/Villetalia/WhatsApp Image 2026-05-17 at 10.43.35 PM.jpeg"
-               alt="Villetalia social">
-
-          <div class="design-actions">
-
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-7')">
-              Ver
-            </button>
-
-            <a class="design-action"
-               href="https://www.instagram.com/villetalia__/"
-               target="_blank"
-               onclick="event.stopPropagation()">
-              IG
-            </a>
-
-          </div>
-
-          <div class="design-caption">
-            <strong>Villetalia</strong>
-            <span>Instagram Preview</span>
-          </div>
-        </div>
-
-
-        <!-- DISEÑOS -->
-
-        <div class="design-slot has-img"
-             data-type="designs"
-             data-title="Diseños"
-             data-desc="Mockup gráfico personalizado."
-             id="design-8">
-
-          <img src="assets/Diseños/SUICIDEBOYS-DISEÑO-MOCKUP.png"
-               alt="Suicideboys mockup">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-8')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Suicideboys</strong>
-            <span>Diseño gráfico</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="designs"
-             data-title="Diseños"
-             data-desc="Diseño hoodie Suicideboys."
-             id="design-9">
-
-          <img src="assets/Diseños/Suiboys hoodie.png"
-               alt="Suicideboys hoodie">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-9')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Suicideboys</strong>
-            <span>Hoodie design</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="designs"
-             data-title="Diseños"
-             data-desc="Diseño Kanye West."
-             id="design-10">
-
-          <img src="assets/Diseños/camisa kanye.png"
-               alt="Kanye shirt">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-10')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Kanye</strong>
-            <span>Streetwear</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="designs"
-             data-title="Diseños"
-             data-desc="Diseño Nirvana."
-             id="design-11">
-
-          <img src="assets/Diseños/camisa nirvana.png"
-               alt="Nirvana shirt">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-11')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Nirvana</strong>
-            <span>Graphic apparel</span>
-          </div>
-        </div>
-
-
-        <div class="design-slot has-img"
-             data-type="designs"
-             data-title="Diseños"
-             data-desc="Diseño Lana del Rey."
-             id="design-12">
-
-          <img src="assets/Diseños/lana del rey blusa.png"
-               alt="Lana del Rey">
-
-          <div class="design-actions">
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-12')">
-              Ver
-            </button>
-          </div>
-
-          <div class="design-caption">
-            <strong>Lana del Rey</strong>
-            <span>Fashion graphic</span>
-          </div>
-        </div>
-
-
-        <!-- PAGINA WEB -->
-
-        <div class="design-slot has-img"
-             data-type="web branding"
-             data-title="Toposig Web"
-             data-desc="Página web corporativa de Toposig."
-             id="design-13">
-
-          <img src="assets/Branding/Toposig/Pagina web/brochure toposig.png"
-               alt="Toposig web">
-
-          <div class="design-actions">
-
-            <button class="design-action"
-                    onclick="event.stopPropagation();openDesign('design-13')">
-              Ver
-            </button>
-
-            <a class="design-action"
-               href="https://toposig.vercel.app/"
-               target="_blank"
-               onclick="event.stopPropagation()">
-              Web
-            </a>
-
-          </div>
-
-          <div class="design-caption">
-            <strong>Toposig</strong>
-            <span>Página web</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="design-detail">
-
-        <div class="design-note">
-          <strong>1. Branding</strong>
-          <span>Identidades visuales, brochures y presencia digital.</span>
-        </div>
-
-        <div class="design-note">
-          <strong>2. Diseños</strong>
-          <span>Mockups, prendas y piezas visuales personalizadas.</span>
-        </div>
-
-        <div class="design-note">
-          <strong>3. Social & Web</strong>
-          <span>Instagram previews y proyectos web interactivos.</span>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="section-divider"></div>
-<!-- SOBRE MÍ -->
-<div class="section reveal light-band" id="sobre">
-  <div class="sec-header"><div class="sec-num">01</div><div class="sec-info"><div class="sec-tag">Quién soy</div><div class="sec-title">Sobre mí</div></div></div>
   <div class="about-grid">
-    <div class="about-card about-main">
+    <div class="about-card">
+      <div class="aside-label">
+        <span class="c-neon">Nombre</span>
+      </div>
+      <div class="aside-value">Valeria Martínez García</div>
+    </div>
+    <div class="about-card">
+      <div class="aside-label">
+        <span class="c-pink">Ubicación</span>
+      </div>
+      <div class="aside-value">Colombia 🇨🇴</div>
+    </div>
+    <div class="about-main">
       <div class="about-text">
-        <p>Soy <strong>estudiante de Marketing</strong> con doble titulación en <strong>Negocios Internacionales</strong> desde 2026, con una fuerte inclinación hacia el branding, el diseño gráfico y la comunicación estratégica para pymes.</p>
-        <p>Me especializo en ayudar a <strong>pequeñas empresas en sus primeras etapas</strong> a construir identidades visuales sólidas y coherentes — logo, colorimetría, tono de voz, brochures y estructura de redes. He trabajado con marcas reales desde cero.</p>
-        <p>Soy <strong>ágil con la Inteligencia Artificial</strong>, emprendedora desde los 19 años con mi proyecto de e-commerce internacional, y siempre abierta a aprender nuevas herramientas y enfoques.</p>
+        <p>Soy diseñadora especializada en <strong>branding y diseño editorial</strong>, con 5+ años de experiencia transformando conceptos en identidades visuales poderosas.</p>
+        <p>Mi enfoque combina <strong>estrategia, creatividad y detalle</strong> para crear soluciones que no solo se ven bien, sino que funcionan. Creo en el poder del diseño para comunicar, conectar y transformar.</p>
       </div>
     </div>
     <div class="about-card">
-      <div class="aside-label c-neon">✳ Mi diferencial</div>
-      <div class="big-stat c-neon">B2</div>
-      <div class="aside-value"><strong style="color:var(--neon)">Inglés B2</strong> — trabajo con herramientas, clientes y mercados internacionales sin barreras. Clave para negocios globales.</div>
+      <div class="aside-label">
+        <span class="c-cyan">Especialidad</span>
+      </div>
+      <div class="aside-value"><strong>Identidad Visual</strong> y Estrategia de Marca</div>
     </div>
     <div class="about-card">
-      <div class="aside-label c-pink">✳ Formación</div>
-      <div class="aside-value" style="font-size:14px;line-height:1.9;">Marketing (2023 – presente)<br>+ Negocios Internacionales<br><strong style="color:var(--pink)">Doble titulación en curso</strong></div>
-    </div>
-    <div class="about-card">
-      <div class="aside-label c-cyan">✳ Proyectos reales</div>
-      <div class="big-stat c-cyan">3+</div>
-      <div class="aside-value">Marcas acompañadas desde cero con branding completo: Topoci, Electricidad, Villa Italia.</div>
-    </div>
-    <div class="about-card">
-      <div class="aside-label c-orange">✳ Busco</div>
-      <div class="aside-value" style="font-size:13px;line-height:1.8;">Proyectos freelance de branding · Prácticas profesionales · Colaboración con agencias de <strong style="color:var(--orange)">marketing y diseño</strong>.</div>
+      <div class="aside-label">
+        <span class="c-orange">Pasión</span>
+      </div>
+      <div class="aside-value">Crear experiencias visuales <strong>memorables</strong></div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section-divider"></div>
-
-<!-- STACK -->
-<div class="section reveal" id="stack">
-  <div class="sec-header"><div class="sec-num">02</div><div class="sec-info"><div class="sec-tag">Lo que manejo</div><div class="sec-title">Herramientas &amp; Skills</div></div></div>
+<section class="section" id="stack">
+  <div class="sec-header">
+    <div class="sec-num">02</div>
+    <div class="sec-info">
+      <div class="sec-tag">Habilidades</div>
+      <h2 class="sec-title">Mi Stack</h2>
+    </div>
+  </div>
   <div class="stack-wrap">
     <div class="stack-card mk">
-      <div class="stack-icon">📊</div>
-      <div class="stack-cat-label c-neon">Marketing Digital</div>
+      <div class="stack-icon">📱</div>
+      <div class="stack-cat-label">Marketing</div>
       <div class="stack-items">
-        <div class="stack-item">Google Ads</div>
-        <div class="stack-item">Google Analytics</div>
-        <div class="stack-item">Meta Ads</div>
-        <div class="stack-item">Estrategia de contenido</div>
-        <div class="stack-item">Email marketing</div>
+        <div class="stack-item">Estrategia de marca</div>
+        <div class="stack-item">Posicionamiento</div>
+        <div class="stack-item">Campañas visuales</div>
       </div>
     </div>
     <div class="stack-card ds">
       <div class="stack-icon">🎨</div>
-      <div class="stack-cat-label c-pink">Diseño &amp; Branding</div>
+      <div class="stack-cat-label">Diseño</div>
       <div class="stack-items">
-        <div class="stack-item">Adobe Illustrator</div>
-        <div class="stack-item">Photoshop (básico)</div>
-        <div class="stack-item">Canva</div>
-        <div class="stack-item">Colorimetría de marca</div>
-        <div class="stack-item">Identidad visual</div>
+        <div class="stack-item">UI/UX</div>
+        <div class="stack-item">Diseño Gráfico</div>
+        <div class="stack-item">Ilustración</div>
       </div>
     </div>
     <div class="stack-card ot">
-      <div class="stack-icon">🚀</div>
-      <div class="stack-cat-label c-orange">Otros</div>
+      <div class="stack-icon">⚡</div>
+      <div class="stack-cat-label">Herramientas</div>
       <div class="stack-items">
-        <div class="stack-item">Excel intermedio</div>
-        <div class="stack-item">IA aplicada</div>
-        <div class="stack-item">E-commerce (eBay)</div>
-        <div class="stack-item">Inglés B2</div>
-        <div class="stack-item">Atención al cliente</div>
+        <div class="stack-item">Figma</div>
+        <div class="stack-item">Adobe Suite</div>
+        <div class="stack-item">Illustrator</div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section-divider"></div>
-
-<div class="section reveal light-band" id="disenos">
-  <div class="sec-header"><div class="sec-num">03</div><div class="sec-info"><div class="sec-tag">Zona interactiva</div><div class="sec-title">Mis diseños</div></div></div>
-</div>
-<div class="design-zone-wrap reveal">
+<section id="disenos" class="design-zone-wrap">
   <div class="design-lab">
-    <aside class="design-panel dark-panel">
-      <div class="design-panel-title">Design<br>gallery</div>
-      <p class="design-panel-copy">Una galería pastel para mostrar tus marcas, brochures, piezas de redes y trabajos reales. Puedes abrir cada pieza, reemplazarla o seguir subiendo más diseños.</p>
-      <div class="design-controls" aria-label="Filtros de diseño">
-        <button class="design-filter active" onclick="filterDesigns('all',this)">Todos los diseños</button>
-        <button class="design-filter" onclick="filterDesigns('branding',this)">Branding</button>
-        <button class="design-filter" onclick="filterDesigns('social',this)">Redes sociales</button>
-        <button class="design-filter" onclick="filterDesigns('brochure',this)">Brochures</button>
+    <div class="design-panel dark-panel">
+      <h3 class="design-panel-title">Branding</h3>
+      <p class="design-panel-copy">Sistemas visuales cohesivos que comunican la esencia de la marca a través de cada punto de contacto.</p>
+      <div class="design-controls">
+        <button class="design-filter active" data-filter="branding">Todos</button>
+        <button class="design-filter" data-filter="branding-logo">Logo</button>
+        <button class="design-filter" data-filter="branding-palette">Paleta</button>
+        <button class="design-filter" data-filter="branding-guidelines">Guías</button>
       </div>
-    </aside>
-   </div>
+    </div>
+    <div class="design-board">
+      <div class="design-grid" id="design-grid-branding">
+        <div class="design-slot" data-type="branding" data-filter="branding-logo">
+          <div class="design-placeholder">
+            <div class="design-kind">Logo</div>
+            <div class="design-plus">+</div>
+            <div class="design-name">Identidad Principal</div>
+          </div>
+        </div>
+        <div class="design-slot" data-type="branding" data-filter="branding-palette">
+          <div class="design-placeholder">
+            <div class="design-kind">Paleta</div>
+            <div class="design-plus">+</div>
+            <div class="design-name">Sistema de Color</div>
+          </div>
+        </div>
+        <div class="design-slot" data-type="branding" data-filter="branding-guidelines">
+          <div class="design-placeholder">
+            <div class="design-kind">Guías</div>
+            <div class="design-plus">+</div>
+            <div class="design-name">Manual de Marca</div>
+          </div>
+        </div>
+      </div>
+      <div class="design-detail">
+        <div class="design-note">
+          <strong>Concepto</strong>
+          <span>Cada identidad visual se construye desde una comprensión profunda del negocio y su audiencia</span>
+        </div>
+        <div class="design-note">
+          <strong>Proceso</strong>
+          <span>Investigación, conceptualización, diseño iterativo y validación con stakeholders clave</span>
+        </div>
+        <div class="design-note">
+          <strong>Resultado</strong>
+          <span>Marcas que destacan, comunican y generan conexión emocional con su público</span>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="section-divider"></div>
-
-<!-- EXPERIENCIA -->
-<div class="section reveal experience-pastel" id="exp">
-  <div class="sec-header"><div class="sec-num">04</div><div class="sec-info"><div class="sec-tag">Mi trayectoria</div><div class="sec-title">Experiencia</div></div></div>
+<section class="section experience-pastel" id="exp">
+  <div class="sec-header">
+    <div class="sec-num">03</div>
+    <div class="sec-info">
+      <div class="sec-tag">Trayectoria</div>
+      <h2 class="sec-title">Experiencia</h2>
+    </div>
+  </div>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-dot d-neon"></div>
-      <div class="tl-date">Ene 2025 — Abr 2025</div>
-      <div class="tl-role">Branding &amp; Comunicación</div>
-      <div class="tl-company">Proyectos independientes · Topoci, Electricidad, Villa Italia</div>
-      <div class="tl-desc">Acompañé tres pymes en la construcción de su identidad visual y comunicacional completa: logos, colorimetría, tono de voz, brochures y estructura visual para redes sociales.</div>
+      <div class="tl-date">2023 - Presente</div>
+      <div class="tl-role">Diseñadora Senior</div>
+      <div class="tl-company">Estudio Creativo XYZ</div>
+      <div class="tl-desc">Lidero proyectos de branding y diseño editorial para clientes premium. Gestiono equipos y aseguro excelencia creativa.</div>
       <div class="tl-tags">
-        <span class="tl-tag" style="background:rgba(212,255,0,.1);border:.5px solid rgba(212,255,0,.3);color:var(--neon)">Branding</span>
-        <span class="tl-tag" style="background:rgba(0,245,255,.1);border:.5px solid rgba(0,245,255,.3);color:var(--cyan)">Illustrator</span>
-        <span class="tl-tag" style="background:rgba(255,45,120,.1);border:.5px solid rgba(255,45,120,.3);color:var(--pink)">Diseño</span>
+        <span class="tl-tag">Branding</span>
+        <span class="tl-tag">Liderazgo</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot d-pink"></div>
-      <div class="tl-date">Dic 2024 — Ene 2026</div>
-      <div class="tl-role">Asistente administrativa &amp; Atención al cliente</div>
-      <div class="tl-company">Delicias del Campo · Bogotá</div>
-      <div class="tl-desc">Manejo de transacciones, atención al cliente, preparación de alimentos y administración operativa del negocio.</div>
+      <div class="tl-date">2021 - 2023</div>
+      <div class="tl-role">Diseñadora Gráfica</div>
+      <div class="tl-company">Agencia Digital Web</div>
+      <div class="tl-desc">Creé identidades visuales y diseños editoriales para startups y medianas empresas.</div>
       <div class="tl-tags">
-        <span class="tl-tag" style="background:rgba(255,45,120,.1);border:.5px solid rgba(255,45,120,.3);color:var(--pink)">Administración</span>
-        <span class="tl-tag" style="background:rgba(124,58,237,.15);border:.5px solid rgba(124,58,237,.35);color:#a78bfa">Atención al cliente</span>
+        <span class="tl-tag">Diseño Gráfico</span>
+        <span class="tl-tag">Editorial</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot d-cyan"></div>
-      <div class="tl-date">Ago 2023 — Sep 2024</div>
-      <div class="tl-role">Asesora de ventas</div>
-      <div class="tl-company">Súper Patitas · Bogotá</div>
-      <div class="tl-desc">Atención al cliente en tienda de productos para mascotas, gestión de ventas y apoyo operativo.</div>
+      <div class="tl-date">2020 - 2021</div>
+      <div class="tl-role">Diseñadora Junior</div>
+      <div class="tl-company">Freelance</div>
+      <div class="tl-desc">Desarrollé proyectos independientes y construí mi portafolio profesional.</div>
       <div class="tl-tags">
-        <span class="tl-tag" style="background:rgba(0,245,255,.1);border:.5px solid rgba(0,245,255,.3);color:var(--cyan)">Ventas</span>
-        <span class="tl-tag" style="background:rgba(212,255,0,.1);border:.5px solid rgba(212,255,0,.3);color:var(--neon)">Atención al cliente</span>
+        <span class="tl-tag">Freelance</span>
+        <span class="tl-tag">Portafolio</span>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot d-orange"></div>
-      <div class="tl-date">Ene 2023 — Abr 2025</div>
-      <div class="tl-role">Mesera &amp; Servicio al cliente</div>
-      <div class="tl-company">La Pizarra &amp; Villa Italia · Bogotá</div>
-      <div class="tl-desc">Servicio al cliente en restaurantes, trabajo en equipo bajo presión y comunicación interpersonal en entornos dinámicos.</div>
+      <div class="tl-date">2019 - 2020</div>
+      <div class="tl-role">Asistente de Diseño</div>
+      <div class="tl-company">Estudio de Diseño Local</div>
+      <div class="tl-desc">Adquirí experiencia práctica en diseño y atención al cliente.</div>
       <div class="tl-tags">
-        <span class="tl-tag" style="background:rgba(255,107,43,.1);border:.5px solid rgba(255,107,43,.3);color:var(--orange)">Servicio al cliente</span>
-        <span class="tl-tag" style="background:rgba(124,58,237,.15);border:.5px solid rgba(124,58,237,.35);color:#a78bfa">Trabajo en equipo</span>
+        <span class="tl-tag">Aprendizaje</span>
+        <span class="tl-tag">Diseño</span>
       </div>
     </div>
     <div class="tl-item">
-      <div class="tl-dot d-neon"></div>
-      <div class="tl-date">2023</div>
-      <div class="tl-role">Fundadora — Print on Demand</div>
-      <div class="tl-company">Marca propia · eBay + Printful</div>
-      <div class="tl-desc">Creé y lancé mi tienda de e-commerce internacional. Diseñé productos en Illustrator, configuré la operación con Printful y gestioné la tienda en eBay de forma autónoma.</div>
+      <div class="tl-dot"></div>
+      <div class="tl-date">2018 - 2019</div>
+      <div class="tl-role">Educación Formal</div>
+      <div class="tl-company">Universidad Nacional</div>
+      <div class="tl-desc">Formación académica en Diseño Gráfico y Comunicación Visual.</div>
       <div class="tl-tags">
-        <span class="tl-tag" style="background:rgba(212,255,0,.1);border:.5px solid rgba(212,255,0,.3);color:var(--neon)">E-commerce</span>
-        <span class="tl-tag" style="background:rgba(0,245,255,.1);border:.5px solid rgba(0,245,255,.3);color:var(--cyan)">Diseño gráfico</span>
-        <span class="tl-tag" style="background:rgba(255,107,43,.1);border:.5px solid rgba(255,107,43,.3);color:var(--orange)">Emprendimiento</span>
+        <span class="tl-tag">Educación</span>
+        <span class="tl-tag">Fundamentos</span>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section-divider"></div>
-
-<!-- EDUCACIÓN -->
-<div class="section reveal light-band" id="edu">
-  <div class="sec-header"><div class="sec-num">05</div><div class="sec-info"><div class="sec-tag">Mi formación</div><div class="sec-title">Educación</div></div></div>
+<section class="section" id="educacion">
+  <div class="sec-header">
+    <div class="sec-num">04</div>
+    <div class="sec-info">
+      <div class="sec-tag">Formación</div>
+      <h2 class="sec-title">Educación</h2>
+    </div>
+  </div>
   <div class="edu-row">
     <div class="edu-card e1">
-      <div class="edu-year c-neon">2023 — Presente</div>
-      <div class="edu-title">Marketing</div>
-      <div class="edu-inst">[Universidad] · Bogotá · En curso</div>
+      <div class="edu-year">2018 - 2020</div>
+      <div class="edu-title">Diseño Gráfico</div>
+      <div class="edu-inst">Universidad Nacional de Colombia</div>
     </div>
     <div class="edu-card e2">
-      <div class="edu-year" style="color:var(--purple)">2026 — En curso</div>
-      <div class="edu-title">Negocios Internacionales</div>
-      <div class="edu-inst">Doble titulación · Próximo semestre</div>
+      <div class="edu-year">2020 - 2021</div>
+      <div class="edu-title">Branding Estratégico</div>
+      <div class="edu-inst">Escuela de Diseño Local</div>
     </div>
     <div class="edu-card e3">
-      <div class="edu-year c-orange">Nivel B2</div>
-      <div class="edu-title">Inglés</div>
-      <div class="edu-inst">Comunicación profesional · Diferencial clave</div>
+      <div class="edu-year">2021 - 2022</div>
+      <div class="edu-title">Tipografía Avanzada</div>
+      <div class="edu-inst">Masterclass Online</div>
     </div>
     <div class="edu-card e4">
-      <div class="edu-year c-cyan">Universidad</div>
-      <div class="edu-title">Marketing Digital</div>
-      <div class="edu-inst">Google Ads · Meta Ads · Analytics · Estrategia</div>
+      <div class="edu-year">2022 - 2023</div>
+      <div class="edu-title">Diseño UI/UX</div>
+      <div class="edu-inst">Curso Especializado</div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section-divider"></div>
-
-<!-- VISIÓN -->
-<div class="section reveal" id="vision">
-  <div class="sec-header"><div class="sec-num">06</div><div class="sec-info"><div class="sec-tag">A dónde voy</div><div class="sec-title">Lo que quiero lograr</div></div></div>
-  <div class="vision-grid">
-    <div class="goal-card"><div class="goal-icon">🌎</div><div><div class="goal-title">Referente en branding pymes</div><div class="goal-desc">Posicionarme como especialista en construcción de marca para pequeñas empresas en Colombia y Latinoamérica.</div></div></div>
-    <div class="goal-card"><div class="goal-icon">🧩</div><div><div class="goal-title">Metodología propia</div><div class="goal-desc">Crear un sistema accesible de construcción de marca para emprendedores que están empezando.</div></div></div>
-    <div class="goal-card"><div class="goal-icon">🌐</div><div><div class="goal-title">Visión internacional</div><div class="goal-desc">Usar mi perfil de Negocios Internacionales para llevar marcas colombianas a mercados globales.</div></div></div>
-    <div class="goal-card"><div class="goal-icon">🎨</div><div><div class="goal-title">Crecer en diseño gráfico</div><div class="goal-desc">Profundizar en diseño como complemento estratégico de mi trabajo en marketing y comunicación.</div></div></div>
-    <div class="goal-card"><div class="goal-icon">🤝</div><div><div class="goal-title">Prácticas o agencia</div><div class="goal-desc">Aprender de equipos creativos consolidados que me permitan crecer rápido y aportar desde el día 1.</div></div></div>
-    <div class="goal-card"><div class="goal-icon">🤖</div><div><div class="goal-title">IA + Marketing</div><div class="goal-desc">Integrar la inteligencia artificial como herramienta estratégica en todos mis proyectos de marca.</div></div></div>
+<section class="section" id="vision">
+  <div class="sec-header">
+    <div class="sec-num">05</div>
+    <div class="sec-info">
+      <div class="sec-tag">Futuro</div>
+      <h2 class="sec-title">Visión</h2>
+    </div>
   </div>
-</div>
+  <div class="vision-grid">
+    <div class="goal-card">
+      <div class="goal-icon">🎯</div>
+      <div>
+        <div class="goal-title">Proyectos Más Grandes</div>
+        <div class="goal-desc">Trabajar con marcas internacionales en proyectos de impacto global.</div>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-icon">🏆</div>
+      <div>
+        <div class="goal-title">Reconocimiento</div>
+        <div class="goal-desc">Obtener premios en diseño y ser referente en la industria.</div>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-icon">👥</div>
+      <div>
+        <div class="goal-title">Mentoring</div>
+        <div class="goal-desc">Guiar a nuevos diseñadores y construir comunidad creativa.</div>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-icon">🚀</div>
+      <div>
+        <div class="goal-title">Innovación</div>
+        <div class="goal-desc">Explorar nuevas herramientas y tendencias en diseño.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="section-divider"></div>
-
-<!-- CONTACTO -->
-<div class="section reveal" id="contacto">
-  <div class="sec-header"><div class="sec-num">07</div><div class="sec-info"><div class="sec-tag">Hablemos</div><div class="sec-title">Contacto</div></div></div>
+<section class="section" id="contacto">
   <div class="contact-hero-txt">
-    <span class="c1">¿Listo para</span>
-    <span class="c2">potenciar</span>
-    <span class="c3">tu marca?</span>
+    <span class="c1">Estoy lista para</span>
+    <span class="c2">tu próximo proyecto</span>
+    <span class="c3">Hablemos</span>
   </div>
   <div class="contact-cards">
     <div class="contact-card">
       <div class="cc-label">Email</div>
-      <div class="cc-value"><strong>martinezrvaleria3@gmail.com</strong></div>
+      <div class="cc-value"><strong>valeria@diseño.com</strong></div>
+    </div>
+    <div class="contact-card">
+      <div class="cc-label">Teléfono</div>
+      <div class="cc-value"><strong>+57 300 123 4567</strong></div>
     </div>
     <div class="contact-card">
       <div class="cc-label">Redes</div>
-      <div class="cc-value">Instagram — @n<br>LinkedIn — /in/valeriamartinez</div>
-    </div>
-    <div class="contact-card">
-      <div class="cc-label">Disponible para</div>
-      <div class="cc-value">Freelance · Prácticas<br>Colaboración con agencias</div>
+      <div class="cc-value"><strong>@ValeriaDesign</strong></div>
     </div>
   </div>
-  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-    <button class="btn-glow">Enviar mensaje ⟶</button>
-    <a href="https://www.linkedin.com/in/valeria-mart%C3%ADnez-b58942263/" target="_blank" class="btn-outline" style="text-decoration:none;display:flex;align-items:center;justify-content:center;"> Ver LinkedIn </a>
-  </div>
-</div>
+</section>
 
 <footer>
-  <div class="ft">© 2025 Valeria Martínez Rodríguez</div>
-  <div class="ft">Bogotá ✳ Marketing · Branding · Diseño</div>
+  <div class="ft">© 2025 Valeria Martínez - Todos los derechos reservados</div>
+  <div class="ft">Diseño Editorial Fusion ✨</div>
 </footer>
 
-<div class="design-modal" id="designModal" onclick="closeDesign()">
-  <div class="design-modal-card" onclick="event.stopPropagation()">
-    <div class="design-modal-media"><img id="designModalImg" alt=""></div>
-    <div class="design-modal-info">
-      <div class="design-modal-kicker" id="designModalType">Galería</div>
-      <div class="design-modal-title" id="designModalTitle">Diseño</div>
-      <p class="design-modal-desc" id="designModalDesc"></p>
-      <button class="design-modal-close" onclick="closeDesign()">Cerrar</button>
-    </div>
-  </div>
-</div>
-
 <script>
-// CURSOR
-const cur=document.getElementById('cur');
-const ring=document.getElementById('ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=(mx-6)+'px';cur.style.top=(my-6)+'px';});
-function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=(rx-18)+'px';ring.style.top=(ry-18)+'px';requestAnimationFrame(animRing);}
-animRing();
+// Cursor personalizado
+const cur = document.getElementById('cur');
+const ring = document.getElementById('ring');
+document.addEventListener('mousemove', (e) => {
+  cur.style.left = e.clientX + 'px';
+  cur.style.top = e.clientY + 'px';
+  ring.style.left = e.clientX - 18 + 'px';
+  ring.style.top = e.clientY - 18 + 'px';
+});
 
-// PROJECT TABS
-function switchProj(id,btn){
-  document.querySelectorAll('.proj-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.proj-tab').forEach(b=>b.classList.remove('active'));
-  document.getElementById('p-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-
-// IMAGE UPLOAD
-function triggerUpload(id){
-  document.getElementById(id).click();
-}
-function loadImg(input,zoneId){
-  const file=input.files[0];
-  if(!file)return;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const zone=document.getElementById(zoneId);
-    const img=zone.querySelector('img');
-    img.src=e.target.result;
-    zone.classList.add('has-img');
-  };
-  reader.readAsDataURL(file);
-}
-
-// DESIGN VIEWER
-function openDesign(zoneId){
-  const zone=document.getElementById(zoneId);
-  const img=zone.querySelector('img');
-  const src=img?img.getAttribute('src'):'';
-  if(!img||!src){
-    triggerUpload(zone.querySelector('input[type=file]').id);
-    return;
-  }
-  document.getElementById('designModalImg').src=src;
-  document.getElementById('designModalImg').alt=img.alt||zone.dataset.title||'Diseño';
-  document.getElementById('designModalTitle').textContent=zone.dataset.title||'Diseño';
-  document.getElementById('designModalDesc').textContent=zone.dataset.desc||'Pieza visual de la galería.';
-  document.getElementById('designModalType').textContent=(zone.dataset.type||'Galería').toUpperCase();
-  document.getElementById('designModal').classList.add('active');
-}
-function closeDesign(){
-  document.getElementById('designModal').classList.remove('active');
-}
-
-// DESIGN FILTERS
-function filterDesigns(type,btn){
-  document.querySelectorAll('.design-filter').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.design-slot').forEach(slot=>{
-    const show=type==='all'||slot.dataset.type===type;
-    slot.dataset.hidden=show?'false':'true';
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
   });
-}
+});
+reveals.forEach(el => observer.observe(el));
 
-// SCROLL REVEAL
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
-},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+// Filtros de diseño
+document.querySelectorAll('.design-filter').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.design-filter').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.design-slot').forEach(slot => {
+      if(filter === 'branding' || slot.dataset.filter === filter) {
+        slot.style.display = 'block';
+      } else {
+        slot.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Botones principales
+document.querySelectorAll('.btn-glow, .btn-outline').forEach(btn => {
+  btn.addEventListener('click', function() {
+    alert('¡Gracias por tu interés! Contactemos pronto.');
+  });
+});
 </script>
+
 </body>
 </html>
